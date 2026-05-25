@@ -224,9 +224,11 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
 .compare tbody td .no{color:var(--mute)}
 .compare tbody tr.group td{background:rgba(255,107,61,.06);color:var(--accent-2);font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;padding:10px 16px}
 
+/* TABLET <=980 */
 @media (max-width:980px){
-  .hero-grid{grid-template-columns:1fr}
-  .bar{grid-template-columns:repeat(2,1fr)}
+  .wrap{padding:0 24px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .bar{grid-template-columns:repeat(2,1fr);padding:24px;gap:18px}
   .prob-grid,.how-grid,.feat-grid,.tariffs,.stack,.refs,.q-grid,.about,.skills,.proof{grid-template-columns:1fr}
   .section{padding:64px 0}
   .hero{padding:64px 0}
@@ -235,6 +237,83 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
   .scope summary .chev{padding:10px 16px;font-size:12px}
   .scope .body{padding:0 20px 22px}
   .about-photo{position:relative;top:0;max-width:380px;margin:0 auto 24px}
+  .nav-links{gap:14px;font-size:13px}
+  .nav-inner{padding:12px 20px}
+  .price-hero{padding:24px}
+  .proof{padding:20px;gap:18px}
+}
+
+/* PHONE <=640 */
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  h1{font-size:clamp(34px,8.5vw,46px)}
+  h2{font-size:clamp(26px,6.4vw,34px)}
+  .nav-inner{padding:10px 16px}
+  .nav-links{display:none}
+  .brand{font-size:15px}
+  .nav .btn{padding:10px 16px;font-size:13px}
+  .hero{padding:40px 0 32px}
+  .hero-sub{font-size:17px;margin-top:18px}
+  .hero-cta{margin-top:24px;gap:10px}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .hero-meta{gap:16px;margin-top:24px;font-size:12px}
+  .section{padding:48px 0}
+  .price-hero{padding:20px;border-radius:18px}
+  .price-row{flex-direction:column;align-items:flex-start;gap:6px;padding:14px 0}
+  .price-row .num{font-size:36px}
+  .bar{grid-template-columns:1fr;padding:20px;gap:14px;margin-top:32px}
+  .tariff{padding:22px !important}
+  .tariff .price{font-size:38px}
+  .tariff h3{font-size:20px}
+  .proof{grid-template-columns:1fr;padding:18px;gap:14px}
+  .proof .item b{font-size:24px}
+  .skill{padding:16px;gap:12px}
+  .skill .ico{width:36px;height:36px;font-size:13px}
+  .skill b{font-size:16px}
+  .skill p{font-size:15px}
+  .stack .item{padding:14px}
+  .scope summary{font-size:15px;padding:18px 16px;gap:14px}
+  .scope summary .left{gap:12px}
+  .scope summary .badge-tier{font-size:11px;padding:5px 10px;letter-spacing:.12em}
+  .scope summary .meta{font-size:13px}
+  .scope summary .chev{padding:8px 12px;font-size:11px;letter-spacing:.1em}
+  .scope .body{padding:0 16px 18px}
+  .scope .body h4{font-size:12px;margin:18px 0 8px}
+  .scope .body ol{font-size:14px;padding-left:18px}
+  .compare{font-size:13px;min-width:680px}
+  .compare thead th{padding:10px 8px}
+  .compare tbody td{padding:8px}
+  .about{gap:32px}
+  .about-photo{max-width:300px}
+  .feat li{font-size:14px}
+  .tariff li{font-size:14px}
+  .q-grid details summary{padding:18px 16px;font-size:15px}
+}
+
+/* SMALL PHONE <=420 */
+@media (max-width:420px){
+  .wrap{padding:0 14px}
+  h1{font-size:clamp(28px,9vw,36px)}
+  h2{font-size:24px}
+  .nav-inner{padding:8px 12px}
+  .brand{font-size:13px;gap:8px}
+  .brand-dot{width:8px;height:8px}
+  .nav .btn{padding:8px 12px;font-size:12px}
+  .hero{padding:32px 0 24px}
+  .hero-sub{font-size:15px}
+  .hero-meta{gap:12px;font-size:11px}
+  .section{padding:40px 0}
+  .price-hero{padding:16px}
+  .price-row .num{font-size:30px}
+  .price-row .label b{font-size:15px}
+  .scope summary{font-size:14px;padding:16px 14px}
+  .scope summary .badge-tier{font-size:10px;padding:4px 8px}
+  .scope summary .chev{padding:7px 10px;font-size:10px}
+  .scope .body ol{font-size:13px}
+  .compare{min-width:620px;font-size:12px}
+  .tariff .price{font-size:32px}
+  .proof .item b{font-size:22px}
+  .btn{padding:14px 22px;font-size:15px}
 }
 </style>
 </head>
