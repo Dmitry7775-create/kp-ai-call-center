@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AI обзвон под ключ. От 2,9 ₽/мин. КП от Дмитрия Ильясова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0a0d14;
+  --bg-2:#11151f;
+  --bg-3:#161b27;
+  --line:#212838;
+  --ink:#e8ecf2;
+  --ink-2:#a4adbe;
+  --mute:#6b748a;
+  --accent:#ff6b3d;
+  --accent-2:#ffb066;
+  --accent-soft:rgba(255,107,61,.12);
+  --ok:#3ddc97;
+  --warn:#ffd23f;
+  --grad-1:radial-gradient(1100px 600px at 80% -10%, rgba(255,107,61,.18), transparent 60%);
+  --grad-2:radial-gradient(900px 500px at -10% 30%, rgba(61,220,151,.10), transparent 60%);
+  --grad-3:radial-gradient(700px 400px at 50% 110%, rgba(255,176,102,.10), transparent 60%);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);background-image:var(--grad-1),var(--grad-2),var(--grad-3);background-attachment:fixed}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-2)}
+h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(44px,5.6vw,76px);line-height:1.04}
+h2{font-size:clamp(32px,3.8vw,52px);line-height:1.1}
+h3{font-size:24px;line-height:1.25}
+p{margin:0 0 12px 0;color:var(--ink-2)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.section{padding:96px 0;border-bottom:1px solid var(--line);position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);background:rgba(255,255,255,.02)}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:14px;background:var(--accent);color:#0a0d14;font-weight:700;font-size:16px;border:0;cursor:pointer;transition:transform .15s ease,filter .15s ease}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05);color:#0a0d14}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.muted{color:var(--mute)}
+.lead{color:var(--ink-2);font-size:20px;max-width:760px}
+.grid{display:grid;gap:20px}
+.card{background:linear-gradient(180deg,var(--bg-2),var(--bg-3));border:1px solid var(--line);border-radius:20px;padding:28px}
+.card.hot{border-color:rgba(255,107,61,.45);box-shadow:0 0 0 1px rgba(255,107,61,.15) inset,0 30px 60px -30px rgba(255,107,61,.35)}
+.tag{display:inline-block;padding:4px 12px;border-radius:8px;background:var(--accent-soft);color:var(--accent-2);font-size:11px;letter-spacing:.08em;font-weight:600;text-transform:uppercase}
+hr.soft{border:0;border-top:1px solid var(--line);margin:0}
+
+/* HEADER */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(10,13,20,.72);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1240px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:18px}
+.brand-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+.nav-links{display:flex;gap:22px;color:var(--ink-2);font-size:14px}
+.nav-links a{color:var(--ink-2)}
+.nav-links a:hover{color:var(--ink)}
+
+/* HERO */
+.hero{padding:120px 0 100px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1 span.gold{background:linear-gradient(120deg,var(--accent) 10%,var(--accent-2) 60%,#fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{margin-top:24px;font-size:20px;color:var(--ink-2);max-width:580px}
+.hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:28px;margin-top:32px;color:var(--mute);font-size:13px;flex-wrap:wrap}
+.hero-meta span b{color:var(--ink);font-weight:600}
+
+/* PRICE CARD HERO */
+.price-hero{position:relative;border-radius:24px;padding:32px;background:linear-gradient(180deg,var(--bg-2),var(--bg-3));border:1px solid var(--line);overflow:hidden}
+.price-hero::before{content:"";position:absolute;inset:-1px;border-radius:24px;padding:1px;background:linear-gradient(135deg,rgba(255,107,61,.6),transparent 50%,rgba(61,220,151,.4));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.price-hero h3{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.18em;font-weight:600;margin-bottom:18px}
+.price-row{display:flex;align-items:flex-end;justify-content:space-between;padding:18px 0;border-bottom:1px dashed var(--line);gap:14px}
+.price-row:last-of-type{border-bottom:0}
+.price-row .label{display:flex;flex-direction:column;gap:4px}
+.price-row .label b{font-size:17px;color:var(--ink)}
+.price-row .label small{color:var(--mute);font-size:13px}
+.price-row .num{font-family:'Space Grotesk';font-size:48px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.price-row .num small{font-size:14px;color:var(--mute);font-weight:500;margin-left:6px;letter-spacing:0}
+.price-foot{margin-top:18px;padding:14px;background:var(--accent-soft);border-radius:12px;font-size:13px;color:var(--accent-2);display:flex;gap:10px;align-items:flex-start}
+
+/* BAR */
+.bar{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:32px;background:linear-gradient(90deg,rgba(255,107,61,.06),rgba(61,220,151,.04));border:1px solid var(--line);border-radius:20px;margin-top:48px}
+.bar .item{display:flex;flex-direction:column;gap:6px}
+.bar .item b{font-family:'Space Grotesk';font-size:34px;color:var(--ink);line-height:1}
+.bar .item small{color:var(--mute);font-size:13px}
+
+/* PROBLEM */
+.prob-grid{grid-template-columns:repeat(3,1fr)}
+.prob .num{font-family:'Space Grotesk';font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.18em}
+.prob h3{margin:14px 0 10px}
+
+/* HOW */
+.how-grid{grid-template-columns:repeat(4,1fr)}
+.step{position:relative}
+.step .step-n{font-family:'Space Grotesk';font-size:60px;color:var(--accent-soft);font-weight:800;line-height:1;margin-bottom:14px}
+.step h3{margin-bottom:8px}
+.step p{font-size:15px}
+
+/* FEATURES */
+.feat-grid{grid-template-columns:repeat(3,1fr)}
+.feat h3{margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.feat h3 .ico{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);display:inline-flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:13px}
+.feat ul{padding:0;margin:0;list-style:none}
+.feat li{padding:9px 0;color:var(--ink-2);font-size:15px;border-top:1px dashed var(--line)}
+.feat li:first-child{border-top:0}
+.feat li::before{content:"→ ";color:var(--accent)}
+
+/* PRICING TABLE */
+.tariffs{grid-template-columns:repeat(3,1fr);margin-top:40px}
+.tariff{display:flex;flex-direction:column;gap:18px}
+.tariff h3{font-size:24px}
+.tariff .price{font-family:'Space Grotesk';font-size:48px;font-weight:700;color:var(--ink);line-height:1}
+.tariff .price small{font-size:14px;color:var(--mute);font-weight:500;margin-left:6px}
+.tariff .desc{color:var(--ink-2);font-size:15px;min-height:54px}
+.tariff ul{padding:0;margin:0;list-style:none}
+.tariff li{padding:10px 0;color:var(--ink-2);font-size:15px;border-top:1px solid var(--line);display:flex;gap:10px}
+.tariff li::before{content:"✓";color:var(--ok);font-weight:700;flex-shrink:0}
+.tariff .actions{margin-top:auto;padding-top:18px}
+
+/* TIMELINE */
+.timeline{position:relative;margin-top:40px}
+.timeline::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),transparent)}
+.tl-item{position:relative;padding:0 0 32px 60px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:10px;top:8px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(255,107,61,.15)}
+.tl-item .week{font-family:'Space Grotesk';font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-weight:700}
+.tl-item h3{margin:6px 0 10px;font-size:21px}
+.tl-item p{font-size:15px}
+
+/* STACK */
+.stack{grid-template-columns:repeat(4,1fr);margin-top:32px}
+.stack .item{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--bg-2)}
+.stack .item b{font-size:15px;color:var(--ink)}
+.stack .item small{color:var(--mute);font-size:13px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:start;margin-top:48px}
+.about-photo{position:sticky;top:24px;border-radius:24px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/4;background:var(--bg-2)}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:saturate(.9) contrast(1.05)}
+.about-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,13,20,.7) 100%);pointer-events:none}
+.about-photo .badge{position:absolute;left:24px;bottom:24px;display:flex;flex-direction:column;gap:6px;color:#fff;z-index:2}
+.about-photo .badge b{font-family:'Space Grotesk';font-size:20px;line-height:1.1;letter-spacing:-.01em}
+.about-photo .badge small{color:var(--accent-2);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.about-text p{font-size:17px;color:var(--ink-2);line-height:1.55}
+.about-text p.big{font-size:22px;color:var(--ink);margin-bottom:18px;line-height:1.4}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+.skill{display:flex;gap:14px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--bg-2);align-items:flex-start}
+.skill .ico{flex:0 0 auto;width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:14px}
+.skill b{display:block;font-size:17px;color:var(--ink);margin-bottom:6px}
+.skill p{margin:0;font-size:16px;color:var(--ink-2);line-height:1.55}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;padding:26px;background:linear-gradient(90deg,rgba(255,107,61,.08),rgba(61,220,151,.05));border:1px solid var(--line);border-radius:18px}
+.proof .item{display:flex;flex-direction:column;gap:6px}
+.proof .item b{font-family:'Space Grotesk';font-size:30px;color:var(--ink);line-height:1}
+.proof .item small{font-size:13px;color:var(--mute)}
+
+/* REFS */
+.refs{grid-template-columns:repeat(4,1fr);margin-top:32px}
+.ref{padding:14px 18px;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;gap:4px;transition:border-color .15s}
+.ref:hover{border-color:var(--accent)}
+.ref b{font-size:15px;color:var(--ink)}
+.ref small{font-size:12px;color:var(--mute);letter-spacing:.04em}
+
+/* QUESTIONS */
+.q-grid{grid-template-columns:repeat(2,1fr);margin-top:32px}
+.q-block{padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--bg-2)}
+.q-block h3{margin-bottom:14px;color:var(--accent-2);font-size:18px}
+.q-block ol{padding-left:20px;margin:0;color:var(--ink-2);font-size:15px}
+.q-block li{padding:7px 0}
+
+/* CTA */
+.cta{text-align:center;padding:120px 0}
+.cta h2{margin-bottom:20px}
+.cta .lead{margin:0 auto 36px;font-size:20px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact-row{margin-top:32px;display:flex;justify-content:center;gap:32px;color:var(--ink-2);font-size:14px;flex-wrap:wrap}
+.contact-row a{color:var(--ink)}
+.contact-row a:hover{color:var(--accent)}
+
+/* FOOT */
+footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-top:1px solid var(--line)}
+
+/* DETAILS, раскрывающиеся блоки работ */
+.scope{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+.scope details{border:1px solid var(--line);border-radius:18px;background:var(--bg-2);overflow:hidden;transition:border-color .15s,background .2s}
+.scope details:hover{border-color:rgba(255,107,61,.35);background:rgba(255,255,255,.015)}
+.scope details[open]{border-color:var(--accent);background:var(--bg-2)}
+.scope summary{list-style:none;padding:28px 30px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:22px;font-weight:600;color:var(--ink);font-size:21px;line-height:1.3}
+.scope summary::-webkit-details-marker{display:none}
+.scope summary .left{display:flex;align-items:center;gap:18px;flex:1;flex-wrap:wrap}
+.scope summary .badge-tier{font-family:'Space Grotesk';font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:6px 14px;border-radius:10px;background:var(--accent-soft);color:var(--accent-2);font-weight:700;flex:0 0 auto}
+.scope summary .meta{color:var(--mute);font-size:15px;font-weight:500}
+.scope summary .chev{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:12px;border:1px solid rgba(255,107,61,.35);background:var(--accent-soft);color:var(--accent);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-family:'Inter',sans-serif;transition:all .2s ease;flex:0 0 auto;white-space:nowrap}
+.scope summary .chev::before{content:"Подробнее"}
+.scope summary .chev .arr{display:inline-block;font-size:13px;transition:transform .25s ease}
+.scope details[open] summary .chev::before{content:"Свернуть"}
+.scope details[open] summary .chev{background:var(--accent);color:#0a0d14;border-color:var(--accent)}
+.scope details[open] summary .chev .arr{transform:rotate(180deg)}
+.scope summary:hover .chev{background:var(--accent);color:#0a0d14;border-color:var(--accent);transform:translateY(-1px);box-shadow:0 8px 20px rgba(255,107,61,.25)}
+.scope .body{padding:0 30px 28px;border-top:1px solid var(--line)}
+.scope .body h4{margin:22px 0 10px;font-size:14px;color:var(--accent-2);text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+.scope .body ol{margin:0;padding-left:22px;color:var(--ink-2);font-size:15px;line-height:1.6}
+.scope .body ol li{padding:4px 0}
+.scope .body ol li b{color:var(--ink);font-weight:600}
+
+/* COMPARE TABLE */
+.compare-wrap{margin-top:36px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--bg-2)}
+.compare-scroll{overflow-x:auto}
+.compare{width:100%;border-collapse:collapse;font-size:14px;min-width:760px}
+.compare thead th{padding:18px 16px;text-align:left;color:var(--mute);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.compare thead th.tier{color:var(--ink);font-size:15px;text-transform:none;letter-spacing:0}
+.compare thead th.tier .price-mini{display:block;color:var(--accent);font-family:'Space Grotesk';font-size:18px;margin-top:4px;font-weight:700}
+.compare thead th.hot{background:rgba(255,107,61,.08);color:var(--accent-2)}
+.compare tbody td{padding:14px 16px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top;line-height:1.45}
+.compare tbody tr:last-child td{border-bottom:0}
+.compare tbody td.row-name{color:var(--ink);font-weight:600;background:rgba(255,255,255,.02)}
+.compare tbody td.hot{background:rgba(255,107,61,.04)}
+.compare tbody td .yes{color:var(--ok);font-weight:700}
+.compare tbody td .no{color:var(--mute)}
+.compare tbody tr.group td{background:rgba(255,107,61,.06);color:var(--accent-2);font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;padding:10px 16px}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .bar{grid-template-columns:repeat(2,1fr)}
+  .prob-grid,.how-grid,.feat-grid,.tariffs,.stack,.refs,.q-grid,.about,.skills,.proof{grid-template-columns:1fr}
+  .section{padding:64px 0}
+  .hero{padding:64px 0}
+  .scope summary{flex-wrap:wrap;font-size:17px;padding:22px 20px}
+  .scope summary .meta{flex-basis:100%}
+  .scope summary .chev{padding:10px 16px;font-size:12px}
+  .scope .body{padding:0 20px 22px}
+  .about-photo{position:relative;top:0;max-width:380px;margin:0 auto 24px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="brand-dot"></span> AI Voice Agent · Дмитрий Ильясов</div>
+    <div class="nav-links">
+      <a href="#price">Цены</a>
+      <a href="#how">Как работает</a>
+      <a href="#timeline">Сроки</a>
+      <a href="#about">Обо мне</a>
+      <a href="#questions">Брифинг</a>
+      <a href="#cta">Связаться</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Коммерческое предложение · 2026</span>
+      <h1 style="margin-top:24px">AI-агент <span class="gold">обзванивает</span> ваших клиентов вместо колл-центра.</h1>
+      <p class="hero-sub">Голосовой ИИ принимает входящие, делает исходящие, квалифицирует лида, бронирует встречу, фиксирует возражение в CRM. 24/7. Без болезней, отгулов, новогодних праздников и ротации операторов.</p>
+      <div class="hero-cta">
+        <a href="#price" class="btn">Цена за минуту →</a>
+        <a href="#cta" class="btn ghost">Запросить пилот</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>14 дней</b> до пилота</span>
+        <span><b>10+ языков</b> в коробке</span>
+        <span><b>Любая CRM</b> через webhook</span>
+      </div>
+    </div>
+
+    <aside class="price-hero" id="price-card">
+      <h3>Стоимость минуты</h3>
+
+      <div class="price-row">
+        <div class="label">
+          <b>Входящий звонок</b>
+          <small>от клиента к роботу, ответ + квалификация</small>
+        </div>
+        <div class="num">2,9<small>₽/мин</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="label">
+          <b>Исходящий звонок</b>
+          <small>робот звонит клиенту по списку</small>
+        </div>
+        <div class="num">3,5<small>₽/мин</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="label">
+          <b>Минимальный пакет</b>
+          <small>предоплата минут на месяц</small>
+        </div>
+        <div class="num">15<small>тыс. ₽</small></div>
+      </div>
+
+      <div class="price-foot">
+        <div>
+          <div style="font-weight:700;color:var(--ink);margin-bottom:6px;font-size:14px">Я продаю разработку, не минуты.</div>
+          <div style="color:var(--ink-2);font-size:13px;line-height:1.5">Минута идёт по себестоимости (Vapi/Retell + SIP + LLM), без моей наценки. Вы платите вендорам напрямую или через мой биллинг 1 в 1. Я зарабатываю на разработке агента, не на трафике.</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="bar">
+    <div class="item"><b>от 2,9 ₽</b><small>минута входящего</small></div>
+    <div class="item"><b>от 3,5 ₽</b><small>минута исходящего</small></div>
+    <div class="item"><b>14 дней</b><small>до запуска MVP</small></div>
+    <div class="item"><b>5-10×</b><small>дешевле минуты оператора</small></div>
+  </div>
+</header>
+
+<section class="section wrap">
+  <span class="eyebrow"><span class="dot"></span> Зачем это нужно</span>
+  <h2 style="margin-top:18px;max-width:820px">Колл-центр сжигает деньги в местах, где должен работать робот.</h2>
+  <div class="grid prob-grid" style="margin-top:40px">
+    <div class="card prob">
+      <div class="num">01 / БОЛЬ</div>
+      <h3>Оператор стоит 60-120 тыс. ₽/мес</h3>
+      <p>Плюс налоги, рабочее место, обучение, контроль. На 1000 звонков в день нужна команда из 8-12 человек. AI закрывает 70-90% типовых сценариев в 5-10 раз дешевле минуты.</p>
+    </div>
+    <div class="card prob">
+      <div class="num">02 / БОЛЬ</div>
+      <h3>Лидов сливают на ровном месте</h3>
+      <p>Клиент звонит в 22:47, 03:15 или в субботу. Никто не берёт трубку. Реклама за этот лид уже оплачена. AI отвечает за 1 секунду, в любой час, на любом языке.</p>
+    </div>
+    <div class="card prob">
+      <div class="num">03 / БОЛЬ</div>
+      <h3>Ручной обзвон базы это лотерея</h3>
+      <p>Менеджер обзванивает 100 контактов, доходит до 30, помнит 5. AI обзванивает 10 000 за ночь, фиксирует каждое возражение в CRM, сегментирует лидов по теплоте.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="how">
+  <span class="eyebrow"><span class="dot"></span> Как работает</span>
+  <h2 style="margin-top:18px">Четыре звена в одной системе.</h2>
+  <p class="lead" style="margin-top:14px">Архитектура собрана из проверенных открытых компонентов и LLM последнего поколения. Никакого «черного ящика», на каждом шаге понятно, что происходит и сколько это стоит.</p>
+
+  <div class="grid how-grid" style="margin-top:40px">
+    <div class="card step">
+      <div class="step-n">01</div>
+      <h3>Триггер</h3>
+      <p>Входящий звонок на ваш номер, либо webhook из CRM на исходящий обзвон по списку.</p>
+    </div>
+    <div class="card step">
+      <div class="step-n">02</div>
+      <h3>Распознавание</h3>
+      <p>Whisper-large v3 в реальном времени переводит речь клиента в текст. Шумы, акценты, перебивания обрабатываются.</p>
+    </div>
+    <div class="card step">
+      <div class="step-n">03</div>
+      <h3>Логика разговора</h3>
+      <p>Claude/GPT-агент с заточенным под ваш бизнес промптом ведёт диалог по сценарию, ловит возражения, поднимает вопросы.</p>
+    </div>
+    <div class="card step">
+      <div class="step-n">04</div>
+      <h3>Действие</h3>
+      <p>Запись в CRM, бронь слота в календаре, оповещение менеджера в Telegram, эскалация на живого оператора.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <span class="eyebrow"><span class="dot"></span> Что входит</span>
+  <h2 style="margin-top:18px">В стоимость минуты включено всё.</h2>
+  <div class="grid feat-grid" style="margin-top:40px">
+    <div class="card feat">
+      <h3><span class="ico">01</span> Голос и речь</h3>
+      <ul>
+        <li>Распознавание Whisper-large v3</li>
+        <li>Синтез ElevenLabs / Yandex SpeechKit</li>
+        <li>Естественные паузы и интонации</li>
+        <li>Прерывания и переспросы</li>
+        <li>Шумоподавление</li>
+      </ul>
+    </div>
+    <div class="card feat">
+      <h3><span class="ico">02</span> Мозг агента</h3>
+      <ul>
+        <li>Claude Haiku / GPT-4o-mini</li>
+        <li>Кастомный промпт под ваш скрипт</li>
+        <li>База знаний по продукту</li>
+        <li>Память диалога</li>
+        <li>Эскалация на человека по триггеру</li>
+      </ul>
+    </div>
+    <div class="card feat">
+      <h3><span class="ico">03</span> Телефония</h3>
+      <ul>
+        <li>SIP-транк / МТС Exolve / Voximplant</li>
+        <li>Российские номера 8-800, мобильные</li>
+        <li>Параллельные линии до 50</li>
+        <li>Запись каждого разговора</li>
+        <li>Тарификация посекундно</li>
+      </ul>
+    </div>
+    <div class="card feat">
+      <h3><span class="ico">04</span> Интеграции</h3>
+      <ul>
+        <li>amoCRM, Bitrix24, RetailCRM</li>
+        <li>Webhook на любой backend</li>
+        <li>Google Calendar, Яндекс</li>
+        <li>Telegram-уведомления менеджеру</li>
+        <li>Google Sheets для отчётов</li>
+      </ul>
+    </div>
+    <div class="card feat">
+      <h3><span class="ico">05</span> Аналитика</h3>
+      <ul>
+        <li>Дашборд: конверсии, причины отказа</li>
+        <li>Транскрипты всех диалогов</li>
+        <li>Тегирование возражений</li>
+        <li>A/B тесты сценариев</li>
+        <li>Выгрузка в Excel/CSV</li>
+      </ul>
+    </div>
+    <div class="card feat">
+      <h3><span class="ico">06</span> Поддержка</h3>
+      <ul>
+        <li>Дообучение агента 2 раза/мес</li>
+        <li>Корректировка промпта по фидбеку</li>
+        <li>Telegram-чат с инженером</li>
+        <li>Экстренная эскалация SLA 1 час</li>
+        <li>Ежемесячный отчёт</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="price">
+  <span class="eyebrow"><span class="dot"></span> Тарифы внедрения</span>
+  <h2 style="margin-top:18px">Три формата под уровень задачи.</h2>
+  <p class="lead" style="margin-top:14px">Цены за минуту одинаковые на всех тарифах. Отличается стоимость и глубина настройки агента под ваш бизнес.</p>
+
+  <div class="grid tariffs">
+    <div class="card tariff">
+      <span class="tag">ПИЛОТ</span>
+      <h3>Pilot</h3>
+      <div class="price">150<small>тыс. ₽</small></div>
+      <p class="desc">Один сценарий, одна интеграция. Проверка гипотезы за 2 недели.</p>
+      <ul>
+        <li>1 голосовой агент</li>
+        <li>1 сценарий до 30 реплик</li>
+        <li>1 интеграция (CRM или Telegram)</li>
+        <li>Запуск за 14 дней</li>
+        <li>Поддержка 1 месяц</li>
+        <li>Минуты оплачиваются отдельно</li>
+      </ul>
+      <div class="actions"><a href="#cta" class="btn ghost" style="width:100%;justify-content:center">Запросить пилот</a></div>
+    </div>
+
+    <div class="card tariff hot">
+      <span class="tag">РЕКОМЕНДУЕМ</span>
+      <h3>Basic</h3>
+      <div class="price">450<small>тыс. ₽</small></div>
+      <p class="desc">Полноценный продакшн. Входящие + исходящие. Настройка под бизнес.</p>
+      <ul>
+        <li>До 3 голосовых агентов</li>
+        <li>До 5 сценариев</li>
+        <li>2 интеграции (CRM + календарь / Telegram)</li>
+        <li>Дообучение на ваших звонках</li>
+        <li>Запуск за 21 день</li>
+        <li>Поддержка 3 месяца</li>
+        <li>Дашборд аналитики</li>
+      </ul>
+      <div class="actions"><a href="#cta" class="btn" style="width:100%;justify-content:center">Выбрать Basic</a></div>
+    </div>
+
+    <div class="card tariff">
+      <span class="tag">ENTERPRISE</span>
+      <h3>Full</h3>
+      <div class="price">650<small>тыс. ₽</small></div>
+      <p class="desc">Сложная логика, A/B тесты, выделенная инфраструктура, юр. контур.</p>
+      <ul>
+        <li>Безлимит агентов и сценариев</li>
+        <li>Любые интеграции через webhook</li>
+        <li>A/B-тестирование сценариев</li>
+        <li>Выделенный сервер (РФ-юрисдикция)</li>
+        <li>NDA + договор на юр. лицо</li>
+        <li>Запуск за 30 дней</li>
+        <li>Поддержка 6 месяцев</li>
+        <li>Ежемесячный аудит сценариев</li>
+      </ul>
+      <div class="actions"><a href="#cta" class="btn ghost" style="width:100%;justify-content:center">Обсудить Full</a></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:32px;text-align:center;background:var(--accent-soft);border-color:rgba(255,107,61,.3)">
+    <h3 style="color:var(--accent-2);margin-bottom:8px">Поддержка после внедрения</h3>
+    <p style="margin:0">35 000 ₽/мес: дообучение агента, мониторинг качества, корректировка промпта, поддержка инженера. Подключается после окончания включённого периода поддержки: со 2-го месяца на Pilot, с 4-го на Basic, с 7-го на Full.</p>
+  </div>
+
+  <div class="card" style="margin-top:24px;background:var(--bg-2);border-color:var(--line)">
+    <h3 style="color:var(--ink);margin-bottom:10px;font-size:18px">Права использования</h3>
+    <p style="margin:0;color:var(--ink-2);font-size:15px;line-height:1.6">Вы получаете полные права на агента, скрипты диалога и интеграции в рамках вашего бизнеса. Я оставляю за собой право использовать обезличенный кейс (отрасль и результаты в цифрах, без названия компании) в портфолио и маркетинге. Полное упоминание (имя, лого, запись звонка, отзыв) обсуждается отдельно и даёт скидку 10-15% от стоимости пакета.</p>
+  </div>
+</section>
+
+<section class="section wrap" id="scope">
+  <span class="eyebrow"><span class="dot"></span> Состав работ по тарифам</span>
+  <h2 style="margin-top:18px">Что именно делается на каждом тарифе. По шагам.</h2>
+  <p class="lead" style="margin-top:14px">Раскройте нужный тариф, чтобы увидеть полный объём работ по этапам: от первой встречи до передачи рабочего агента вашей команде.</p>
+
+  <div class="scope">
+
+    <details>
+      <summary>
+        <span class="left">
+          <span class="badge-tier">ПИЛОТ</span>
+          <span>Pilot, 150 000 ₽</span>
+          <span class="meta">14 дней · 1 агент · 1 сценарий · 32 шага работы</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <h4>Этап 1. Аналитика и постановка (дни 1-3)</h4>
+        <ol>
+          <li><b>Установочное интервью</b> с заказчиком 60 мин: цели звонков, типы клиентов, текущая воронка, KPI</li>
+          <li><b>Аудит существующего колл-центра:</b> прослушивание 10 реальных звонков, разметка типичных возражений</li>
+          <li><b>Карта целевого диалога:</b> точки входа, желаемый исход, fallback-сценарии</li>
+          <li><b>Согласование KPI пилота</b> с заказчиком: % успешных дозвонов, % целевого действия, средняя длительность звонка</li>
+          <li><b>Брендбук голоса:</b> манера речи, темп, формальность, запрет-слов</li>
+        </ol>
+        <h4>Этап 2. Проектирование сценария (дни 3-6)</h4>
+        <ol>
+          <li><b>Карта диалога</b> в виде flowchart: до 30 реплик, 5-8 веток</li>
+          <li><b>Системный промпт</b> для LLM: персона агента, контекст бизнеса, правила поведения</li>
+          <li><b>Сбор faq-базы</b> для агента: 20-30 типичных вопросов клиентов и эталонные ответы</li>
+          <li><b>Скрипт обработки 5 главных возражений</b> с альтернативной формулировкой на каждое</li>
+          <li><b>Согласование сценария</b> с заказчиком, 2 раунда правок</li>
+        </ol>
+        <h4>Этап 3. Техническая сборка (дни 6-10)</h4>
+        <ol>
+          <li><b>Регистрация и настройка Vapi/Retell</b> аккаунта с привязкой биллинга</li>
+          <li><b>Подбор голоса:</b> тестирование 5-7 русских голосов (ElevenLabs, OpenAI, Yandex SpeechKit), A/B на коротком фрагменте</li>
+          <li><b>Настройка STT</b> (Deepgram или Yandex SpeechKit) под русский язык, обучение на специфичных терминах вашего бизнеса</li>
+          <li><b>Настройка LLM</b> (GPT-4o-mini или Claude Haiku) с контекстным окном под сценарий</li>
+          <li><b>Сборка цепочки</b> STT → LLM → TTS в Vapi с tuning latency до 800-1200 мс</li>
+          <li><b>Подключение SIP-телефонии</b> (Zadarma или Voximplant) для звонков на номера РФ</li>
+          <li><b>Интеграция #1</b> на выбор: webhook в CRM (Bitrix24, AmoCRM) или Telegram-бот для уведомлений</li>
+          <li><b>Настройка записи звонков</b> и хранения в S3-совместимом хранилище</li>
+        </ol>
+        <h4>Этап 4. Тестирование (дни 10-13)</h4>
+        <ol>
+          <li><b>Юнит-тесты сценария:</b> 30 тестовых звонков по разным веткам диалога</li>
+          <li><b>Стресс-тест речи:</b> разные акценты, фоновый шум, прерывание реплик</li>
+          <li><b>Тест возражений:</b> 10 «сложных клиентов» по заранее заготовленным сценариям</li>
+          <li><b>Тест интеграции:</b> проверка попадания лидов в CRM, корректность полей</li>
+          <li><b>Замер метрик:</b> latency, прерываемость, доля успешных диалогов</li>
+          <li><b>Итерация по результатам тестов:</b> 2-3 раунда правок промпта и сценария</li>
+        </ol>
+        <h4>Этап 5. Запуск и передача (день 14)</h4>
+        <ol>
+          <li><b>Первые 50 живых звонков под наблюдением</b> с раз��еткой проблем</li>
+          <li><b>Корректировка сценария</b> по итогам первых звонков</li>
+          <li><b>Базовый дашборд</b> в Google Sheets или Notion: количество звонков, конверсия, средняя длительность, стоимость минуты</li>
+          <li><b>Передача доступов</b> заказчику: Vapi-кабинет, CRM-интеграция, дашборд</li>
+          <li><b>Обучение команды заказчика:</b> 1 онлайн-сессия 60 мин по работе с дашбордом и базовым правкам сценария</li>
+          <li><b>Документация:</b> карта диалога, системный промпт, инструкция по дообучению</li>
+          <li><b>1 месяц поддержки в Telegram:</b> правки сценария, ответ на вопросы, мониторинг качества</li>
+        </ol>
+      </div>
+    </details>
+
+    <details open>
+      <summary>
+        <span class="left">
+          <span class="badge-tier" style="background:var(--accent);color:#0a0d14">РЕКОМЕНДУЕМ</span>
+          <span>Basic, 450 000 ₽</span>
+          <span class="meta">21 день · до 3 агентов · до 5 сценариев · 58 шагов работы</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <h4>Этап 1. Стратегия и аналитика (дни 1-4)</h4>
+        <ol>
+          <li><b>Серия из 3 интервью</b> с заказчиком: владелец, руководитель отдела продаж, оператор колл-центра</li>
+          <li><b>Аудит 30+ реальных звонков</b> с расшифровкой и разметкой паттернов</li>
+          <li><b>Картирование клиентских сегментов:</b> 3-5 портретов с разной скоростью принятия решения</li>
+          <li><b>Сценарная матрица:</b> входящий/исходящий × сегмент клиента × этап воронки = до 5 сценариев</li>
+          <li><b>Расчёт юнит-экономики:</b> стоимость минуты, целевой ROMI, точка окупаемости</li>
+          <li><b>KPI-документ:</b> метрики на 30/60/90 дней с триггерами эскалации</li>
+        </ol>
+        <h4>Этап 2. Проектирование (дни 4-9)</h4>
+        <ol>
+          <li><b>До 5 сценариев диалога</b> в виде flowchart, каждый до 50 реплик</li>
+          <li><b>3 системных промпта</b> для разных агентов (например: входящий, исходящий лидген, реактивация базы)</li>
+          <li><b>База FAQ из 50-80 вопросов</b> с эталонными ответами под бренд</li>
+          <li><b>Скрипты обработки 15 ключевых возражений</b> с 2-3 альтернативами на каждое</li>
+          <li><b>Логика квалификации лида:</b> правила score, передача оператору, отказ</li>
+          <li><b>Логика времени звонков:</b> часовые пояса, нерабочие часы, праздники</li>
+          <li><b>Согласование с заказчиком,</b> 3 раунда правок</li>
+        </ol>
+        <h4>Этап 3. Техническая сборка (дни 9-15)</h4>
+        <ol>
+          <li><b>Настройка инфраструктуры</b> Vapi/Retell под нагрузку до 50 параллельных звонков</li>
+          <li><b>Кастомизация голоса:</b> клонирование голоса диктора через ElevenLabs Voice Cloning или премиум-голос</li>
+          <li><b>STT с рас��иренным словарём</b> (термины вашей отрасли, имена, продукты)</li>
+          <li><b>LLM с RAG:</b> подключение базы знаний компании (PDF, регламенты, прайс) через векторную БД</li>
+          <li><b>Дообучение промпта</b> на вашей выгрузке звонков (50+ диалогов разметка → fine-tune via few-shot)</li>
+          <li><b>Сборка 3 агентов</b> со специализацией</li>
+          <li><b>Интеграция #1: CRM</b> (Bitrix24, AmoCRM, Salesforce) с двусторонним обменом: чтение клиентских данных + запись результата звонка</li>
+          <li><b>Интеграция #2: календарь</b> (Google Calendar / Яндекс.Календарь) или Telegram-бот для команды</li>
+          <li><b>Webhook-логика:</b> обработка событий в реальном времени, ретраи, очередь</li>
+          <li><b>SIP-телефония</b> с резервированием на 2 провайдеров</li>
+          <li><b>Запись и хранение</b> с шифрованием в S3-совместимом хранилище</li>
+        </ol>
+        <h4>Этап 4. Дашборд и аналитика (дни 13-17)</h4>
+        <ol>
+          <li><b>Дашборд в Metabase или Looker Studio</b> с 12 метриками (звонки, конверсия, длительность, NPS-разметка, стоимость лида, доля успешных дозвонов и т.д.)</li>
+          <li><b>Автоматическая разметка звонков LLM:</b> категория исхода, тон клиента, упомянутые возражения</li>
+          <li><b>Алерты в Telegram</b> при отклонении метрик от нормы</li>
+          <li><b>Еженедельный авто-отчёт</b> на email руководителя</li>
+        </ol>
+        <h4>Этап 5. Тестирование (дни 17-20)</h4>
+        <ol>
+          <li><b>100+ тестовых звонков</b> по всем 5 сценариям</li>
+          <li><b>Мини-фокус-группа:</b> 5 представителей вашей ЦА проходят разговор с агентом, дают обратную связь</li>
+          <li><b>Стресс-тест нагрузки:</b> 30 параллельных звонков</li>
+          <li><b>Тест отказоустойчивости:</b> отключение SIP-провайдера, отключение LLM-провайдера</li>
+          <li><b>Замер метрик качества</b> по 8 параметрам</li>
+          <li><b>3 раунда правок</b> по итогам тестов</li>
+        </ol>
+        <h4>Этап 6. Запуск и сопровождение (дни 20-21 + 3 месяца)</h4>
+        <ol>
+          <li><b>Запуск в продакшн с canary-режимом:</b> 10% трафика → 50% → 100%</li>
+          <li><b>Первые 200 живых звонков под наблюдением</b> с ежедневной корректировкой</li>
+          <li><b>Передача доступов и документации</b> заказчику</li>
+          <li><b>Обучение команды:</b> 3 онлайн-сессии (руководитель, маркетолог, оператор)</li>
+          <li><b>Полная документация:</b> архитектура, промпты, инструкции по дообучению, runbook инцидентов</li>
+          <li><b>3 месяца поддержки:</b> правки сценариев, дообучение, мониторинг качества, реакция на инциденты в течение 4 часов</li>
+          <li><b>Ежемесячный отчёт</b> по метрикам и рекомендациям</li>
+        </ol>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="left">
+          <span class="badge-tier">ENTERPRISE</span>
+          <span>Full, 650 000 ₽</span>
+          <span class="meta">30 дней · безлимит агентов · A/B-тесты · 80+ шагов работы</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <h4>Этап 1. Pre-discovery и стратегия (дни 1-5)</h4>
+        <ol>
+          <li><b>Аудит инфраструктуры заказчика:</b> текущая телефония, CRM, BI, IT-политики</li>
+          <li><b>Юридический контур:</b> NDA, договор на юр. лицо, согласование с СБ заказчика, требования по персданным (152-ФЗ)</li>
+          <li><b>Техническая постановка:</b> требования по нагрузке, отказоустойчивости, юрисдикции данных, SLA</li>
+          <li><b>Серия из 5+ интервью</b> со всеми ролями (топ, продажи, маркетинг, IT, юристы)</li>
+          <li><b>Аудит 100+ звонков</b> с автоматической разметкой через LLM</li>
+          <li><b>Конкурентный анализ</b> голосовых сценариев в вашей отрасли</li>
+          <li><b>Дорожная карта на 6 месяцев</b> с поэтапным расширением</li>
+        </ol>
+        <h4>Этап 2. Архитектура (дни 5-10)</h4>
+        <ol>
+          <li><b>Безлимит агентов и сценариев</b> в рамках единой архитектуры</li>
+          <li><b>Выделенный сервер в РФ-юрисдикции</b> (Selectel, VK Cloud, Yandex Cloud) под персданные</li>
+          <li><b>Изолированный LLM-инстанс</b> или self-hosted модель (для конфиденциальных данных)</li>
+          <li><b>Векторная БД с базой знаний компании</b> (RAG на 1000+ документов)</li>
+          <li><b>Очередь задач</b> для исходящих кампаний (RabbitMQ или Redis)</li>
+          <li><b>Резервирование</b> SIP-провайдеров (3 провайдера в горячем резерве)</li>
+          <li><b>Шифрование на уровне записей,</b> сегрегация ключей</li>
+        </ol>
+        <h4>Этап 3. Сценарии и контент (дни 10-18)</h4>
+        <ol>
+          <li><b>Безлимит сценариев,</b> модульная архитектура (общие блоки переиспользуются)</li>
+          <li><b>Безлимит агентов</b> с разными ролями (продажи, поддержка, опросы, NPS, реактивация, дозвон по дебиторке и т.д.)</li>
+          <li><b>База FAQ 200+ вопросов</b> с автоматическим обновлением через RAG</li>
+          <li><b>Многоязычность</b> при необходимости (русский + английский / казахский / узбекский)</li>
+          <li><b>Кастомное клонирование голоса</b> диктора в студийном качестве (8 часов записи + ElevenLabs Pro)</li>
+          <li><b>Динамическая персонализация:</b> агент адаптирует тон/скорость под сегмент клиента</li>
+          <li><b>5 раундов согласования</b> с заказчиком</li>
+        </ol>
+        <h4>Этап 4. A/B-тестирование (дни 18-25)</h4>
+        <ol>
+          <li><b>Платформа A/B-тестов:</b> распределение трафика по версиям сценария 50/50 или 90/10</li>
+          <li><b>Тестируемые гипотезы:</b> формулировки оффера, последовательность шагов, скрипт возражений, голос, темп речи</li>
+          <li><b>Статистическая значимость</b> с поправкой на множественные сравнения (Bonferroni)</li>
+          <li><b>Авто-победитель:</b> лучший вариант автоматически становится основным после достижения значимости</li>
+          <li><b>Журнал экспериментов</b> со всеми тестами и выводами</li>
+        </ol>
+        <h4>Этап 5. BI и интеграции (дни 22-28)</h4>
+        <ol>
+          <li><b>Полноценный BI-дашборд</b> в Metabase / Power BI / Yandex DataLens с 30+ метриками</li>
+          <li><b>Когортный анализ</b> по источникам, сегментам, дням недели</li>
+          <li><b>Прогноз на следующий месяц</b> по моделям ARIMA или Prophet</li>
+          <li><b>Любые интеграции через webhook:</b> 1С, SAP, специализированные ERP/MIS</li>
+          <li><b>Двусторонняя синхронизация с CRM</b> в реальном времени</li>
+          <li><b>Интеграция с системой обзвона по базе должников</b> (если применимо)</li>
+          <li><b>SSO / LDAP</b> для доступа сотрудников заказчика</li>
+        </ol>
+        <h4>Этап 6. Безопасность и комплаенс (дни 25-30)</h4>
+        <ol>
+          <li><b>Соответствие 152-ФЗ:</b> хранение персданных в РФ, журнал доступа, право на забвение</li>
+          <li><b>Аудит безопасности</b> внешним подрядчиком (по требованию заказчика)</li>
+          <li><b>Инструкция для СБ</b> заказчика, ответы на вопросы службы безопасности</li>
+          <li><b>Penetration-test</b> публичных API системы</li>
+          <li><b>Резервное копирование</b> с RPO 15 минут, RTO 1 час</li>
+        </ol>
+        <h4>Этап 7. Запуск и поддержка (день 30 + 6 месяцев)</h4>
+        <ol>
+          <li><b>Поэтапный запуск</b> с canary-режимом и немедленным rollback при отклонении метрик</li>
+          <li><b>Команда сопровождения:</b> я + 2 ассистента для дежурства в часы пиковой нагрузки</li>
+          <li><b>SLA: реакция на инцидент 1 час, восстановление 4 часа в рабочее время</b></li>
+          <li><b>Ежемесячный аудит сценариев</b> с рекомендациями по улучшению</li>
+          <li><b>Полная документация:</b> архитектура, runbook, регламенты, инструкции для каждой роли</li>
+          <li><b>6 месяцев поддержки</b> с правом расширения</li>
+          <li><b>Передача в собственную команду заказчика</b> по запросу: обучение технических специалистов на 2-3 недели</li>
+        </ol>
+      </div>
+    </details>
+
+  </div>
+
+  <div class="scope" style="margin-top:60px">
+    <details>
+      <summary>
+        <span class="left">
+          <span class="badge-tier" style="background:rgba(61,220,151,.15);color:var(--ok)">СРАВНЕНИЕ</span>
+          <span>Сравнительная таблица тарифов</span>
+          <span class="meta">32 параметра · 7 групп · Pilot vs Basic vs Full</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <p style="margin:18px 0 14px;color:var(--ink-2);font-size:15px;line-height:1.55">Что отличается на каждом тарифе по всем ключевым параметрам.</p>
+
+        <div class="compare-wrap">
+          <div class="compare-scroll">
+            <table class="compare">
+              <thead>
+                <tr>
+                  <th>Параметр</th>
+                  <th class="tier">Pilot<span class="price-mini">150 тыс ₽</span></th>
+                  <th class="tier hot">Basic<span class="price-mini">450 тыс ₽</span></th>
+                  <th class="tier">Full<span class="price-mini">650 тыс ₽</span></th>
+                </tr>
+              </thead>
+              <tbody>
+          <tr class="group"><td colspan="4">Объём</td></tr>
+          <tr><td class="row-name">Срок запуска</td><td>14 дней</td><td class="hot">21 день</td><td>30 дней</td></tr>
+          <tr><td class="row-name">Голосовых агентов</td><td>1</td><td class="hot">до 3</td><td>безлимит</td></tr>
+          <tr><td class="row-name">Сценариев диалога</td><td>1 (до 30 реплик)</td><td class="hot">до 5 (до 50 реплик)</td><td>безлимит, модульная архитектура</td></tr>
+          <tr><td class="row-name">Шагов работы по этапам</td><td>32</td><td class="hot">58</td><td>80+</td></tr>
+          <tr><td class="row-name">Раундов правок с заказчиком</td><td>2</td><td class="hot">3</td><td>5</td></tr>
+
+          <tr class="group"><td colspan="4">Аналитика и подготовка</td></tr>
+          <tr><td class="row-name">Прослушано звонков на старте</td><td>10</td><td class="hot">30+</td><td>100+ (с авто-разметкой)</td></tr>
+          <tr><td class="row-name">Интервью с заказчиком</td><td>1 (60 мин)</td><td class="hot">3 (по ролям)</td><td>5+ (включая IT и юристов)</td></tr>
+          <tr><td class="row-name">База FAQ</td><td>20-30 вопросов</td><td class="hot">50-80 вопросов</td><td>200+, авто-обновление через RAG</td></tr>
+          <tr><td class="row-name">Скрипты возражений</td><td>5 ключевых</td><td class="hot">15 ключевых × 2-3 альтернативы</td><td>безлимит, A/B-варианты</td></tr>
+
+          <tr class="group"><td colspan="4">Голос и LLM</td></tr>
+          <tr><td class="row-name">Голос агента</td><td>Готовый русский (ElevenLabs / OpenAI)</td><td class="hot">Премиум или клонирование диктора</td><td>Студийное клонирование (8 ч записи)</td></tr>
+          <tr><td class="row-name">LLM</td><td>GPT-4o-mini / Claude Haiku</td><td class="hot">Premium-LLM с RAG</td><td>Изолированный или self-hosted</td></tr>
+          <tr><td class="row-name">База знаний (RAG)</td><td><span class="no">нет</span></td><td class="hot"><span class="yes">да</span> (до 100 документов)</td><td><span class="yes">да</span> (1000+ документов)</td></tr>
+          <tr><td class="row-name">Многоязычность</td><td><span class="no">нет</span></td><td class="hot">опционально</td><td><span class="yes">да</span> (RU + EN / KZ / UZ)</td></tr>
+
+          <tr class="group"><td colspan="4">Интеграции</td></tr>
+          <tr><td class="row-name">Интеграций с внешними системами</td><td>1 (CRM или Telegram)</td><td class="hot">2 (CRM + календарь / TG)</td><td>безлимит через webhook (1С, SAP, ERP)</td></tr>
+          <tr><td class="row-name">Двусторонняя синхронизация с CRM</td><td>односторонняя запись</td><td class="hot"><span class="yes">да</span></td><td><span class="yes">да</span>, в реальном времени</td></tr>
+          <tr><td class="row-name">SSO / LDAP</td><td><span class="no">нет</span></td><td class="hot"><span class="no">нет</span></td><td><span class="yes">да</span></td></tr>
+
+          <tr class="group"><td colspan="4">Аналитика</td></tr>
+          <tr><td class="row-name">Дашборд</td><td>Базовый (Google Sheets / Notion)</td><td class="hot">Metabase / Looker, 12 метрик</td><td>Power BI / DataLens, 30+ метрик, прогноз</td></tr>
+          <tr><td class="row-name">Авто-разметка звонков LLM</td><td><span class="no">нет</span></td><td class="hot"><span class="yes">да</span></td><td><span class="yes">да</span> + когортный анализ</td></tr>
+          <tr><td class="row-name">A/B-тестирование сценариев</td><td><span class="no">нет</span></td><td class="hot"><span class="no">нет</span></td><td><span class="yes">да</span>, со стат. значимостью</td></tr>
+          <tr><td class="row-name">Алерты в Telegram</td><td><span class="no">нет</span></td><td class="hot"><span class="yes">да</span></td><td><span class="yes">да</span> + дежурная команда</td></tr>
+
+          <tr class="group"><td colspan="4">Инфраструктура и безопасность</td></tr>
+          <tr><td class="row-name">Параллельных звонков</td><td>до 10</td><td class="hot">до 50</td><td>безлимит</td></tr>
+          <tr><td class="row-name">Резервирование SIP-провайдеров</td><td>1 провайдер</td><td class="hot">2 провайдера</td><td>3 провайдера в горячем резерве</td></tr>
+          <tr><td class="row-name">Юрисдикция данных</td><td>облако вендора</td><td class="hot">по согласованию</td><td>выделенный сервер РФ, 152-ФЗ</td></tr>
+          <tr><td class="row-name">NDA + договор юр. лицо</td><td>по запросу</td><td class="hot"><span class="yes">да</span></td><td><span class="yes">да</span> + согласование с СБ</td></tr>
+          <tr><td class="row-name">Резервное копирование</td><td>стандарт вендора</td><td class="hot">ежедневное</td><td>RPO 15 мин, RTO 1 час</td></tr>
+
+          <tr class="group"><td colspan="4">Тестирование</td></tr>
+          <tr><td class="row-name">Тестовых звонков</td><td>30</td><td class="hot">100+</td><td>500+ с фокус-группой</td></tr>
+          <tr><td class="row-name">Стресс-тест нагрузки</td><td><span class="no">нет</span></td><td class="hot"><span class="yes">да</span> (30 параллельных)</td><td><span class="yes">да</span> + отказоустойчивость</td></tr>
+          <tr><td class="row-name">Pen-test API</td><td><span class="no">нет</span></td><td class="hot"><span class="no">нет</span></td><td><span class="yes">да</span></td></tr>
+
+          <tr class="group"><td colspan="4">Сопровождение</td></tr>
+          <tr><td class="row-name">Включённая поддержка</td><td>1 месяц</td><td class="hot">3 месяца</td><td>6 месяцев</td></tr>
+          <tr><td class="row-name">SLA реакции на инцидент</td><td>в течение дня</td><td class="hot">4 часа</td><td>1 час</td></tr>
+          <tr><td class="row-name">Ежемесячный аудит сценариев</td><td><span class="no">нет</span></td><td class="hot">по запросу</td><td><span class="yes">да</span>, входит</td></tr>
+          <tr><td class="row-name">Обучение команды заказчика</td><td>1 сессия 60 мин</td><td class="hot">3 сессии по ролям</td><td>2-3 недели передачи в собственную команду</td></tr>
+          <tr><td class="row-name">Документация</td><td>карта диалога + промпт</td><td class="hot">+ runbook инцидентов</td><td>+ регламенты, архитектура, инструкции по ролям</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="section wrap" id="economics">
+  <span class="eyebrow"><span class="dot"></span> Себестоимость и окупаемость</span>
+  <h2 style="margin-top:18px">Я продаю разработку, не минуты.</h2>
+  <p class="lead" style="margin-top:14px">Минута звонка идёт по себестоимости вендоров без моей наценки. Сравнение с рынком и расчёт окупаемости пилота 150 000 ₽ ниже.</p>
+
+  <div class="scope" style="margin-top:32px">
+
+    <details open>
+      <summary>
+        <span class="left">
+          <span class="badge-tier">МОДЕЛЬ</span>
+          <span>Из чего складывается минута и почему она «по себестоимости»</span>
+          <span class="meta">5 вендоров · 1 минута диалога</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <p style="margin:18px 0 14px;color:var(--ink-2);font-size:15px;line-height:1.55">Минута звонка собирается из 5 компонентов. Каждый компонент это счёт от внешнего вендора, я не накручиваю сверху ни рубля. Вы можете либо завести счета у вендоров напрямую (Vapi, Deepgram, OpenAI, ElevenLabs, SIP), либо платить через мой биллинг по принципу «1 в 1 без наценки».</p>
+
+        <div class="compare-wrap">
+          <div class="compare-scroll">
+            <table class="compare">
+              <thead>
+                <tr>
+                  <th>Компонент</th>
+                  <th class="tier">Вендор</th>
+                  <th class="tier">Цена</th>
+                  <th class="tier">На 1 минуту</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-name">Распознавание речи (STT)</td><td>Deepgram Nova-2 / Yandex SpeechKit</td><td>$0.0043 / мин</td><td>≈ 0,40 ₽</td></tr>
+                <tr><td class="row-name">Логика диало��а (LLM)</td><td>GPT-4o-mini / Claude Haiku</td><td>$0.15 / 1M токенов</td><td>≈ 0,15 ₽ (1500 токенов)</td></tr>
+                <tr><td class="row-name">Синтез голоса (TTS)</td><td>ElevenLabs Turbo / OpenAI</td><td>$0.018 / мин</td><td>≈ 1,70 ₽</td></tr>
+                <tr><td class="row-name">Телефония РФ (SIP)</td><td>Zadarma / Voximplant / МТС Exolve</td><td>0,4-1,5 ₽ / мин</td><td>0,40-1,50 ₽</td></tr>
+                <tr><td class="row-name">Запись и хранение</td><td>S3-совместимое хранилище</td><td>~$0.02 / ГБ</td><td>≈ 0,05 ₽</td></tr>
+                <tr><td class="row-name" style="background:rgba(255,107,61,.1);color:var(--accent-2)"><b>Итого себестоимость</b></td><td style="background:rgba(255,107,61,.06)">вендоры суммарно</td><td style="background:rgba(255,107,61,.06)">прямые счета</td><td style="background:rgba(255,107,61,.06);color:var(--accent);font-weight:700"><b>2,7-3,7 ₽ / мин</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p style="margin-top:18px;color:var(--ink-2);font-size:14px;line-height:1.55">«От 2,9 ₽/мин» в начале КП = именно эта себестоимость с минимальной маржой 0-5% для покрытия колебаний курса. Если вы заводите счета у вендоров напрямую, моя маржа = 0 ₽/мин.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="left">
+          <span class="badge-tier" style="background:rgba(61,220,151,.15);color:var(--ok)">РЫНОК</span>
+          <span>Сколько стоит та же минута у конкурентов и оператора</span>
+          <span class="meta">Tomoru · Zvonok · LPTracker · оператор</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <p style="margin:18px 0 14px;color:var(--ink-2);font-size:15px;line-height:1.55">Те же STT/LLM/TTS вендоры, но обёрнуты в SaaS-маркетплейс с маржой 2-5×. Источники: публичные тарифы вендоров и rb.ru (про оператора).</p>
+
+        <div class="compare-wrap">
+          <div class="compare-scroll">
+            <table class="compare">
+              <thead>
+                <tr>
+                  <th>Решение</th>
+                  <th class="tier">Цена за минуту</th>
+                  <th class="tier">Маржа поверх себестоимости</th>
+                  <th class="tier">Кому продают</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="row-name">Себестоимость (этот проект)</td><td><b style="color:var(--accent)">2,7-3,7 ₽</b></td><td><span class="yes">0 %</span></td><td>вы (заказчик разработки)</td></tr>
+                <tr><td class="row-name">Tomoru AI</td><td>4,4-6,4 ₽</td><td>+60-130 %</td><td>массовый сегмент SMB</td></tr>
+                <tr><td class="row-name">LPTracker AI-бот</td><td>8-12 ₽ (LLM+TTS+STT в пакете)</td><td>+200-300 %</td><td>лидген, входящие</td></tr>
+                <tr><td class="row-name">Zvonok.com</td><td>2,3 ₽ входящий (простой бот) / 4-7 ₽ AI</td><td>+50-90 % на AI-тарифе</td><td>массовый автообзвон</td></tr>
+                <tr><td class="row-name">Voximplant Avatar</td><td>5-9 ₽</td><td>+80-150 %</td><td>enterprise-обзвон</td></tr>
+                <tr><td class="row-name">Живой оператор колл-центра</td><td>15-30 ₽</td><td>x5-x10</td><td>классическая модель</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p style="margin-top:18px;color:var(--ink-2);font-size:14px;line-height:1.55">Логика: вы платите один раз за разработку, дальше минута стоит как сырьё. У Tomoru и аналогов модель обратная: разработка «бесплатная», маржа сидит в каждой минуте на горизонте лет.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="left">
+          <span class="badge-tier" style="background:rgba(255,210,63,.15);color:var(--warn)">ОКУПАЕМОСТЬ</span>
+          <span>Сравнение с Tomoru и с оператором, точка окупаемости пилота</span>
+          <span class="meta">Pilot 150 тыс ₽ · 3 сценария объёма</span>
+        </span>
+        <span class="chev"><span class="arr">▾</span></span>
+      </summary>
+      <div class="body">
+        <p style="margin:18px 0 14px;color:var(--ink-2);font-size:15px;line-height:1.55">Расчёт: вы потратили 150 000 ₽ на разработку пилота. Считаем, через сколько минут разговора эта инвестиция окупится за счёт экономии на цене минуты vs альтернатива.</p>
+
+        <div class="compare-wrap">
+          <div class="compare-scroll">
+            <table class="compare">
+              <thead>
+                <tr>
+                  <th>Сценарий объёма</th>
+                  <th class="tier">Минут в месяц</th>
+                  <th class="tier">vs Tomoru (5 ₽/мин)</th>
+                  <th class="tier">vs оператор (20 ₽/мин)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group"><td colspan="4">Малый объём (стоматология, барбершоп, школа)</td></tr>
+                <tr><td class="row-name">Экономия / минута</td><td>5 000 мин</td><td>≈ 2,1 ₽</td><td>≈ 17,1 ₽</td></tr>
+                <tr><td class="row-name">Экономия / месяц</td><td>5 000 мин</td><td>10 500 ₽</td><td>85 500 ₽</td></tr>
+                <tr><td class="row-name">Окупаемость пилота 150 тыс ₽</td><td>5 000 мин</td><td><b style="color:var(--warn)">14 месяцев</b></td><td><b style="color:var(--ok)">1,8 месяца</b></td></tr>
+
+                <tr class="group"><td colspan="4">Средний объём (сеть клиник, автодилер, агрегатор)</td></tr>
+                <tr><td class="row-name">Экономия / минута</td><td>30 000 мин</td><td>≈ 2,1 ₽</td><td>≈ 17,1 ₽</td></tr>
+                <tr><td class="row-name">Экономия / месяц</td><td>30 000 мин</td><td>63 000 ₽</td><td>513 000 ₽</td></tr>
+                <tr><td class="row-name">Окупаемость пилота 150 тыс ₽</td><td>30 000 мин</td><td><b style="color:var(--ok)">2,4 месяца</b></td><td><b style="color:var(--ok)">9 дней</b></td></tr>
+
+                <tr class="group"><td colspan="4">Большой объём (банк, телеком, маркетплейс)</td></tr>
+                <tr><td class="row-name">Экономия / минута</td><td>200 000 мин</td><td>≈ 2,1 ₽</td><td>≈ 17,1 ₽</td></tr>
+                <tr><td class="row-name">Экономия / месяц</td><td>200 000 мин</td><td>420 000 ₽</td><td>3 420 000 ₽</td></tr>
+                <tr><td class="row-name">Окупаемость пилота 150 тыс ₽</td><td>200 000 мин</td><td><b style="color:var(--ok)">11 дней</b></td><td><b style="color:var(--ok)">2 дня</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p style="margin-top:18px;color:var(--ink-2);font-size:14px;line-height:1.55">Если ваш колл-центр сейчас работает живыми операторами, пилот окупается за дни-недели даже на минимальном объёме. Если вы уже используете Tomoru или аналог, точка перехода = 25-30 тыс минут в месяц.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<section class="section wrap" id="timeline">
+  <span class="eyebrow"><span class="dot"></span> Сроки внедрения</span>
+  <h2 style="margin-top:18px">От договора до первого живого звонка: 14 дней (Pilot) или 21 день (Basic).</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="week">Неделя 1 · дни 1-3</div>
+      <h3>Брифинг и сценарий</h3>
+      <p>Снимаю сценарии разговоров с менеджеров (2-3 встречи по 1 часу). Получаю доступы к CRM и телефонии. Согласовываем целевые метрики пилота.</p>
+    </div>
+    <div class="tl-item">
+      <div class="week">Неделя 1 · дни 4-7</div>
+      <h3>Сборка агента</h3>
+      <p>Пишу промпт под голос вашей компании, подключаю распознавание и синтез, настраиваю SIP-транк. Тестирую на синтетических звонках.</p>
+    </div>
+    <div class="tl-item">
+      <div class="week">Неделя 2 · дни 8-12</div>
+      <h3>Интеграции и тесты</h3>
+      <p>Подключаю CRM (создание лидов, обновление статусов), Telegram-уведомления менеджеру, запись звонков. Прогоняем 50-100 тестовых разговоров.</p>
+    </div>
+    <div class="tl-item">
+      <div class="week">Неделя 2 · день 13-14</div>
+      <h3>Запуск и калибровка</h3>
+      <p>Включаем агента на реальный поток. Первые 48 часов слушаем каждый звонок, точечно правим промпт. Передаём дашборд и инструкцию вашему менеджеру.</p>
+    </div>
+    <div class="tl-item">
+      <div class="week">С 15-го дня</div>
+      <h3>Боевой режим + поддержка</h3>
+      <p>Агент работает 24/7. Я раз в неделю провожу аудит, дообучаю на новых возражениях, отчитываюсь в Telegram. Эскалация SLA 1 час.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <span class="eyebrow"><span class="dot"></span> Технологии</span>
+  <h2 style="margin-top:18px">Стек, который работает в проде.</h2>
+
+  <div class="grid stack">
+    <div class="item"><b>Whisper-large v3</b><small>Распознавание речи (OpenAI)</small></div>
+    <div class="item"><b>ElevenLabs / SaluteSpeech</b><small>Синтез голоса</small></div>
+    <div class="item"><b>Claude Haiku 4.5</b><small>LLM-агент диалога</small></div>
+    <div class="item"><b>МТС Exolve / Voximplant</b><small>SIP-телефония</small></div>
+    <div class="item"><b>FastAPI + Python</b><small>Бэкенд оркестрации</small></div>
+    <div class="item"><b>Postgres + S3</b><small>Хранение записей и логов</small></div>
+    <div class="item"><b>Webhook / REST</b><small>Интеграции с CRM</small></div>
+    <div class="item"><b>VPS в РФ</b><small>Юрисдикция и 152-ФЗ</small></div>
+  </div>
+
+  <div class="grid refs">
+    <div class="ref"><b>Vapi.ai</b><small>Эталон западного UX</small></div>
+    <div class="ref"><b>Retell AI</b><small>Качество голоса low-latency</small></div>
+    <div class="ref"><b>Bland AI</b><small>Flat-pricing подход</small></div>
+    <div class="ref"><b>Synthflow</b><small>No-code сценарии</small></div>
+    <div class="ref"><b>МТС Exolve</b><small>РФ-телефония, 152-ФЗ</small></div>
+    <div class="ref"><b>Tomoru</b><small>РФ-кейсы, продажи</small></div>
+    <div class="ref"><b>Звонобот / P1SMS</b><small>Массовый обзвон</small></div>
+    <div class="ref"><b>Dasha.ai</b><small>Естественность диалога</small></div>
+  </div>
+</section>
+
+<section class="section wrap" id="about">
+  <span class="eyebrow"><span class="dot"></span> Кто внедряет</span>
+  <h2 style="margin-top:18px;max-width:1300px">Дмитрий Ильясов. ИИ-консультант, маркетолог, экс-предприниматель.</h2>
+
+  <div class="about">
+    <div class="about-photo">
+      <img src="assets/dmitry.jpg" alt="Дмитрий Ильясов" loading="lazy" />
+      <div class="badge">
+        <small>ИИ-консалтинг · 2026</small>
+        <b>Дмитрий Ильясов</b>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <p class="big">Я строю на ИИ-агентах то, что раньше требовало команды из 5-10 человек. Делаю это для своего консалтинга и для клиентов с 2024 года.</p>
+
+      <p>До ИИ за моими плечами 10+ лет в маркетинге и собственный опыт предпринимательства: построил строительную компанию с оборотом 500 млн ₽ за 3 года. Прошёл и взлёт, и системные ошибки, поэтому понимаю, как устроены деньги, конверсии и операционка изнутри.</p>
+
+      <p>Сейчас работаю на пересечении: искусственный интеллект (ИИ) + стратегический маркетинг + бизнес-архитектура. Закрываю на ИИ-агентах большую часть операционных задач, которые раньше делала команда. AI-обзвон, одна из таких систем.</p>
+
+      <div class="proof">
+        <div class="item"><b>10+ лет</b><small>в маркетинге и продажах</small></div>
+        <div class="item"><b>2+ года</b><small>в продакшне с ИИ-агентами</small></div>
+        <div class="item"><b>500 млн ₽</b><small>оборот собственной компании</small></div>
+      </div>
+
+      <h3 style="margin-top:40px;font-size:24px">Что я умею делать с ИИ</h3>
+
+      <div class="skills">
+        <div class="skill">
+          <span class="ico">01</span>
+          <div>
+            <b>Голосовые ИИ-агенты</b>
+            <p>Распознавание речи, синтез голоса, LLM-логика диалога. Входящие и исходящие звонки 24/7.</p>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="ico">02</span>
+          <div>
+            <b>Промпт-инжиниринг под бизнес</b>
+            <p>Пишу промпты под скрипт продаж, тон голоса бренда, базу знаний продукта. Дообучаю на реальных звонках.</p>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="ico">03</span>
+          <div>
+            <b>Интеграции CRM и backend</b>
+            <p>amoCRM, Bitrix24, RetailCRM, любой webhook-API. Создание лидов, обновление статусов, эскалация менеджеру.</p>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="ico">04</span>
+          <div>
+            <b>Стек Claude / GPT / Whisper</b>
+            <p>Знаю экономику моделей, prompt caching, контекст-менеджмент. Собираю продакшн с минимальной ценой минуты.</p>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="ico">05</span>
+          <div>
+            <b>Аналитика и А/B сценариев</b>
+            <p>Тегирование возражений, дашборды по конверсии, эксперименты со скриптами на реальном трафике.</p>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="ico">06</span>
+          <div>
+            <b>Маркетинговая упаковка</b>
+            <p>Знаю не только техническую часть. Помогаю собрать сценарий так, чтобы он продавал, а не просто дозванивался.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:36px;font-size:16px;line-height:1.55;color:var(--ink-2);padding:22px 24px;border-left:3px solid var(--accent);background:rgba(255,107,61,.06);border-radius:0 14px 14px 0">Я не агентство и не маркетплейс ботов. Я делаю каждое внедрение руками, лично отвечаю за результат и за фразу, которую агент скажет вашему клиенту. Если робот что-то сломает, я на связи в Telegram в течение часа.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="questions">
+  <span class="eyebrow"><span class="dot"></span> Брифинг для 100% попадания</span>
+  <h2 style="margin-top:18px">Что мне нужно от вас, чтобы запустить агента точно в срок.</h2>
+  <p class="lead" style="margin-top:14px">Эти ответы я снимаю на первой встрече. Чем точнее ответите заранее, тем меньше итераций и быстрее боевой запуск.</p>
+
+  <div class="grid q-grid">
+    <div class="q-block">
+      <h3>1 · Бизнес и сценарий</h3>
+      <ol>
+        <li>Какой тип звонков: входящие, исходящие, оба?</li>
+        <li>Что должен сделать агент за 1 разговор? (квалифицировать / забронировать / закрыть продажу / собрать данные)</li>
+        <li>Сколько звонков в день в пике? Какая конверсия сейчас у живого менеджера?</li>
+        <li>Есть ли готовый скрипт разговора или нужно написать с нуля?</li>
+        <li>На каком этапе агент передаёт диалог человеку?</li>
+      </ol>
+    </div>
+
+    <div class="q-block">
+      <h3>2 · Технологии и доступы</h3>
+      <ol>
+        <li>Какая CRM? (amoCRM / Bitrix24 / RetailCRM / своя)</li>
+        <li>Какая телефония сейчас? Готовы ли подключить SIP-транк?</li>
+        <li>Какие поля в CRM заполняет агент после звонка?</li>
+        <li>Есть ли требование РФ-юрисдикции (152-ФЗ)?</li>
+        <li>Кому из команды отправлять оповещения о горячих лидах?</li>
+      </ol>
+    </div>
+
+    <div class="q-block">
+      <h3>3 · Голос и стиль</h3>
+      <ol>
+        <li>Мужской / женский голос? Имя агента?</li>
+        <li>Какой тон: формальный, дружелюбный, экспертный?</li>
+        <li>Чего агент НЕ должен говорить ни в коем случае?</li>
+        <li>На какие вопросы агент НЕ имеет права отвечать самостоятельно?</li>
+        <li>Есть ли запись хороших звонков менеджеров на которых дообучить?</li>
+      </ol>
+    </div>
+
+    <div class="q-block">
+      <h3>4 · Метрики и пилот</h3>
+      <ol>
+        <li>Что считаем успехом пилота? (конкретный KPI)</li>
+        <li>Какой бюджет на минуты в первый месяц?</li>
+        <li>Сколько живых разговоров готовы прогнать через бота на старте?</li>
+        <li>Кто со стороны бизнеса ответственный за внедрение?</li>
+        <li>Когда крайний срок выйти в продакшн?</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="cta wrap" id="cta">
+  <span class="eyebrow"><span class="dot"></span> Следующий шаг</span>
+  <h2 style="margin-top:18px;max-width:760px;margin-left:auto;margin-right:auto">Созвон 30 минут: собираем сценарий, через 2 недели у вас работает робот.</h2>
+  <p class="lead">На встрече покажу демо живого агента, разберу ваш кейс и пришлю детальный план внедрения с фиксированными сроками.</p>
+  <div class="cta-actions">
+    <a href="https://t.me/dmitry_trast" class="btn">Написать в Telegram →</a>
+    <a href="#price" class="btn ghost">Ещё раз посмотреть цены</a>
+  </div>
+  <div class="contact-row">
+    <span>Telegram: <a href="https://t.me/dmitry_trast">@dmitry_trast</a></span>
+    <span>Дмитрий Ильясов · ИИ-консалтинг</span>
+    <span>2026</span>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 · Дмитрий Ильясов · AI Voice Agent внедрение под ключ</div></footer>
+
+</body>
+</html>
