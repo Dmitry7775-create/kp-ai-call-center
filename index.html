@@ -334,6 +334,7 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
     <div class="brand"><span class="brand-dot"></span> AI Voice Agent</div>
     <div class="nav-links">
       <a href="#price">Цены</a>
+      <a href="#opex">Сервисы</a>
       <a href="#how">Как работает</a>
       <a href="#timeline">Сроки</a>
       <a href="#about">Обо мне</a>
@@ -527,6 +528,14 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
   <h2 style="margin-top:18px">Три формата под уровень задачи.</h2>
   <p class="lead" style="margin-top:14px">Цены за минуту одинаковые на всех тарифах. Отличается стоимость и глубина настройки агента под ваш бизнес.</p>
 
+  <div style="margin-top:24px;padding:20px 24px;background:linear-gradient(135deg,rgba(255,107,61,.12),rgba(255,107,61,.04));border:1px solid rgba(255,107,61,.3);border-radius:14px;display:flex;gap:14px;align-items:flex-start">
+    <div style="font-size:24px;line-height:1">⚙️</div>
+    <div>
+      <b style="display:block;font-size:16px;color:var(--ink);margin-bottom:6px">Указана стоимость моей разработки.</b>
+      <span style="color:var(--ink-2);font-size:14px;line-height:1.55">Операционные сервисы заказчика (Vapi/Retell, SIP-провайдер, ElevenLabs, OpenAI API, cloud-аккаунт) оплачиваются отдельно по факту использования. Расчёт месячного бюджета на сервисы по каждому тарифу: блок «Operating cost» ниже.</span>
+    </div>
+  </div>
+
   <div class="grid tariffs">
     <div class="card tariff">
       <span class="tag">ПИЛОТ</span>
@@ -562,7 +571,7 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
         <li>До 5 сценариев</li>
         <li>2 интеграции (CRM + календарь / Telegram)</li>
         <li>Дообучение на ваших звонках</li>
-        <li>Запуск за 21 день</li>
+        <li>Запуск за 21-28 дней</li>
         <li>Поддержка 3 месяца</li>
         <li>Дашборд аналитики</li>
       </ul>
@@ -674,7 +683,7 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
         <span class="left">
           <span class="badge-tier" style="background:var(--accent);color:#0a0d14">РЕКОМЕНДУЕМ</span>
           <span>Basic, 290 000 ₽</span>
-          <span class="meta">21 день · до 3 агентов · до 5 сценариев · 58 шагов работы</span>
+          <span class="meta">21-28 дней · до 3 агентов · до 5 сценариев · 58 шагов работы</span>
         </span>
         <span class="chev"><span class="arr">▾</span></span>
       </summary>
@@ -848,7 +857,7 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
               </thead>
               <tbody>
           <tr class="group"><td colspan="4">Объём</td></tr>
-          <tr><td class="row-name">Срок запуска</td><td>14 дней</td><td class="hot">21 день</td><td>30-45 дней</td></tr>
+          <tr><td class="row-name">Срок запуска</td><td>14 дней</td><td class="hot">21-28 дней</td><td>30-45 дней</td></tr>
           <tr><td class="row-name">Голосовых агентов</td><td>1</td><td class="hot">до 3</td><td>безлимит</td></tr>
           <tr><td class="row-name">Сценариев диалога</td><td>1 (до 30 реплик)</td><td class="hot">до 5 (до 50 реплик)</td><td>безлимит, модульная архитектура</td></tr>
           <tr><td class="row-name">Шагов работы по этапам</td><td>32</td><td class="hot">58</td><td>80+</td></tr>
@@ -1039,9 +1048,98 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
   </div>
 </section>
 
-<section class="section wrap" id="timeline">
+<section class="section wrap" id="opex">
+  <span class="eyebrow"><span class="dot"></span> Operating cost для заказчика</span>
+  <h2 style="margin-top:18px">Сколько вы платите за работу системы каждый месяц.</h2>
+  <p class="lead" style="margin-top:14px">Это сервисы, которые держат агента в воздухе: телефония, распознавание, синтез, LLM, хостинг. Оплачиваются напрямую вендорам, без моей наценки. Я подключаю аккаунты под вас в день 1.</p>
+
+  <div class="card" style="margin-top:32px;padding:0;overflow:hidden">
+    <div style="overflow-x:auto">
+      <table class="compare" style="margin:0">
+        <thead>
+          <tr>
+            <th style="width:32%">Статья расходов</th>
+            <th>Pilot<br><span style="font-size:12px;color:var(--ink-2);font-weight:400">1.5-3 тыс. мин/мес</span></th>
+            <th class="hot">Basic<br><span style="font-size:12px;color:var(--ink-2);font-weight:400">5-10 тыс. мин/мес</span></th>
+            <th>Full<br><span style="font-size:12px;color:var(--ink-2);font-weight:400">10+ тыс. мин/мес</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">STT (Deepgram Nova-3 RU)</td>
+            <td>~0,7 ₽/мин</td>
+            <td>~0,7 ₽/мин</td>
+            <td>self-host или Deepgram</td>
+          </tr>
+          <tr>
+            <td class="row-name">LLM (GPT-4o-mini API)</td>
+            <td>~1,5 ₽/мин</td>
+            <td>~1,5 ₽/мин</td>
+            <td>self-host на Yandex GPU</td>
+          </tr>
+          <tr>
+            <td class="row-name">TTS (ElevenLabs RU)</td>
+            <td>1,5-2 ₽/мин</td>
+            <td>1,5-2 ₽/мин</td>
+            <td>свой voice clone, Business $1320/мес</td>
+          </tr>
+          <tr>
+            <td class="row-name">SIP-провайдер (Mango/Sipuni/МТТ)</td>
+            <td>500-1500 ₽/мес + 0,5-1 ₽/мин</td>
+            <td>1,5-3 тыс. ₽/мес + минуты</td>
+            <td>3 провайдера в резерве, 5-8 тыс. ₽/мес</td>
+          </tr>
+          <tr>
+            <td class="row-name">Платформа агента (Vapi/Retell)</td>
+            <td>$0,05/мин платформа</td>
+            <td>$0,05/мин или свой стек</td>
+            <td>свой стек, платформа не нужна</td>
+          </tr>
+          <tr>
+            <td class="row-name">Hosting / cloud</td>
+            <td>VPS 500-2000 ₽/мес</td>
+            <td>cloud 5-10 тыс. ₽/мес</td>
+            <td>GPU-сервер 80-300 тыс. ₽/мес</td>
+          </tr>
+          <tr>
+            <td class="row-name">ElevenLabs подписка</td>
+            <td>Creator $22/мес</td>
+            <td>Creator или Business</td>
+            <td>Business $1320/мес ≈ 120 тыс. ₽</td>
+          </tr>
+          <tr style="background:var(--accent-soft)">
+            <td class="row-name"><b style="color:var(--accent)">Итого operating cost/мес</b></td>
+            <td><b style="color:var(--accent)">15-35 тыс. ₽</b></td>
+            <td><b style="color:var(--accent)">50-120 тыс. ₽</b></td>
+            <td><b style="color:var(--accent)">150-400 тыс. ₽</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:24px;padding:24px 28px;background:linear-gradient(135deg,rgba(61,220,151,.08),rgba(61,220,151,.02));border-color:rgba(61,220,151,.3)">
+    <h3 style="margin:0 0 14px;font-size:18px">Сравнение с альтернативами на 5 000 минут/мес</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:14px">
+      <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+        <td style="padding:8px 0;color:var(--ink-2)">Колл-центр на живых операторах</td>
+        <td style="text-align:right;color:var(--warn);font-weight:600">75-150 тыс. ₽ только за минуты</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+        <td style="padding:8px 0;color:var(--ink-2)">Готовый SaaS типа Tomoru/Zvonok</td>
+        <td style="text-align:right;color:var(--warn);font-weight:600">12-32 тыс. ₽ + лимиты на кастом</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;color:var(--ink-2)"><b>Ваш кастомный агент (Pilot/Basic)</b></td>
+        <td style="text-align:right;color:var(--ok);font-weight:700">15-35 тыс. ₽, полный контроль</td>
+      </tr>
+    </table>
+  </div>
+
+  <p style="margin-top:24px;color:var(--ink-2);font-size:14px;line-height:1.6">Цифры по сервисам взяты из публичных прайсов вендоров на май 2026 (Deepgram, ElevenLabs, Vapi, Yandex Cloud, Mango Office, Sipuni). Курс пересчёта USD/RUB ~92. На больших объёмах вендоры дают скидки 10-25 процентов, эти переговоры я веду за вас бесплатно.</p>
+</section>
   <span class="eyebrow"><span class="dot"></span> Сроки внедрения</span>
-  <h2 style="margin-top:18px">От договора до первого живого звонка: 14 дней (Pilot) или 21 день (Basic).</h2>
+  <h2 style="margin-top:18px">От договора до первого живого звонка: 14 дней (Pilot) или 21-28 дней (Basic).</h2>
 
   <div class="timeline">
     <div class="tl-item">
