@@ -1050,18 +1050,112 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
 
 <section class="section wrap" id="opex">
   <span class="eyebrow"><span class="dot"></span> Operating cost для заказчика</span>
-  <h2 style="margin-top:18px">Сколько вы платите за работу системы каждый месяц.</h2>
-  <p class="lead" style="margin-top:14px">Это сервисы, которые держат агента в воздухе: телефония, распознавание, синтез, LLM, хостинг. Оплачиваются напрямую вендорам, без моей наценки. Я подключаю аккаунты под вас в день 1.</p>
+  <h2 style="margin-top:18px">Постоянные и переменные затраты на работу системы.</h2>
+  <p class="lead" style="margin-top:14px">Сервисы оплачиваются напрямую вендорам, без моей наценки. Я подключаю аккаунты под вас в день 1. Ниже разделил на три категории: разовые при старте, постоянные ежемесячно, переменные за каждую минуту.</p>
 
-  <div class="card" style="margin-top:32px;padding:0;overflow:hidden">
+  <h3 style="margin-top:48px;font-size:20px;color:var(--ink)">1. Разовые при старте (платится один раз)</h3>
+  <p style="margin-top:6px;color:var(--ink-2);font-size:14px">Оплачиваются в первую неделю работы, до первого живого звонка.</p>
+  <div class="card" style="margin-top:18px;padding:0;overflow:hidden">
     <div style="overflow-x:auto">
       <table class="compare" style="margin:0">
         <thead>
           <tr>
-            <th style="width:32%">Статья расходов</th>
-            <th>Pilot<br><span style="font-size:12px;color:var(--ink-2);font-weight:400">1.5-3 тыс. мин/мес</span></th>
-            <th class="hot">Basic<br><span style="font-size:12px;color:var(--ink-2);font-weight:400">5-10 тыс. мин/мес</span></th>
-            <th>Full<br><span style="font-size:12px;color:var(--ink-2);font-weight:400">10+ тыс. мин/мес</span></th>
+            <th style="width:36%">Статья</th>
+            <th>Pilot</th>
+            <th class="hot">Basic</th>
+            <th>Full</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">Подключение SIP-номера (городской/8-800)</td>
+            <td>500-2000 ₽</td>
+            <td>1-3 тыс. ₽</td>
+            <td>3-6 тыс. ₽ (резерв 3 провайдера)</td>
+          </tr>
+          <tr>
+            <td class="row-name">Депозит на Vapi/ElevenLabs API</td>
+            <td>~$50</td>
+            <td>~$100</td>
+            <td>~$200-500</td>
+          </tr>
+          <tr>
+            <td class="row-name">Студийная запись голоса (при кастом-клонировании)</td>
+            <td>0 (используем готовые)</td>
+            <td>15-30 тыс. ₽ опционально</td>
+            <td>30-50 тыс. ₽ (60-90 мин записи)</td>
+          </tr>
+          <tr style="background:var(--accent-soft)">
+            <td class="row-name"><b style="color:var(--accent)">Итого разовые</b></td>
+            <td><b style="color:var(--accent)">1-3 тыс. ₽</b></td>
+            <td><b style="color:var(--accent)">3-35 тыс. ₽</b></td>
+            <td><b style="color:var(--accent)">35-100 тыс. ₽</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3 style="margin-top:48px;font-size:20px;color:var(--ink)">2. Постоянные ежемесячные (не зависят от объёма звонков)</h3>
+  <p style="margin-top:6px;color:var(--ink-2);font-size:14px">Платятся помесячно, даже если в этом месяце не было ни одного звонка. Это аренда инфраструктуры и подписки.</p>
+  <div class="card" style="margin-top:18px;padding:0;overflow:hidden">
+    <div style="overflow-x:auto">
+      <table class="compare" style="margin:0">
+        <thead>
+          <tr>
+            <th style="width:36%">Статья</th>
+            <th>Pilot</th>
+            <th class="hot">Basic</th>
+            <th>Full</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">SIP-провайдер, абонплата</td>
+            <td>500-1500 ₽/мес</td>
+            <td>1,5-3 тыс. ₽/мес</td>
+            <td>5-8 тыс. ₽/мес</td>
+          </tr>
+          <tr>
+            <td class="row-name">Hosting / cloud-сервер</td>
+            <td>VPS 500-2000 ₽/мес</td>
+            <td>cloud 5-10 тыс. ₽/мес</td>
+            <td>GPU-сервер 80-300 тыс. ₽/мес</td>
+          </tr>
+          <tr>
+            <td class="row-name">ElevenLabs подписка (TTS-кредиты включены)</td>
+            <td>Creator $22/мес ≈ 2 тыс. ₽</td>
+            <td>Creator или Business</td>
+            <td>Business $1320/мес ≈ 120 тыс. ₽</td>
+          </tr>
+          <tr>
+            <td class="row-name">Мониторинг + домен + SSL</td>
+            <td>0-500 ₽/мес</td>
+            <td>500-1500 ₽/мес</td>
+            <td>2-5 тыс. ₽/мес</td>
+          </tr>
+          <tr style="background:var(--accent-soft)">
+            <td class="row-name"><b style="color:var(--accent)">Итого постоянные/мес</b></td>
+            <td><b style="color:var(--accent)">3-6 тыс. ₽</b></td>
+            <td><b style="color:var(--accent)">9-25 тыс. ₽</b></td>
+            <td><b style="color:var(--accent)">210-435 тыс. ₽</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3 style="margin-top:48px;font-size:20px;color:var(--ink)">3. Переменные за каждую минуту разговора</h3>
+  <p style="margin-top:6px;color:var(--ink-2);font-size:14px">Растут пропорционально объёму звонков. Нет звонков — нет этих расходов.</p>
+  <div class="card" style="margin-top:18px;padding:0;overflow:hidden">
+    <div style="overflow-x:auto">
+      <table class="compare" style="margin:0">
+        <thead>
+          <tr>
+            <th style="width:36%">Статья</th>
+            <th>Pilot</th>
+            <th class="hot">Basic</th>
+            <th>Full</th>
           </tr>
         </thead>
         <tbody>
@@ -1069,57 +1163,80 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
             <td class="row-name">STT (Deepgram Nova-3 RU)</td>
             <td>~0,7 ₽/мин</td>
             <td>~0,7 ₽/мин</td>
-            <td>self-host или Deepgram</td>
+            <td>включено в self-host</td>
           </tr>
           <tr>
             <td class="row-name">LLM (GPT-4o-mini API)</td>
             <td>~1,5 ₽/мин</td>
             <td>~1,5 ₽/мин</td>
-            <td>self-host на Yandex GPU</td>
+            <td>включено в GPU-сервер</td>
           </tr>
           <tr>
-            <td class="row-name">TTS (ElevenLabs RU)</td>
+            <td class="row-name">TTS сверх квоты подписки</td>
             <td>1,5-2 ₽/мин</td>
             <td>1,5-2 ₽/мин</td>
-            <td>свой voice clone, Business $1320/мес</td>
+            <td>0 (включено в Business)</td>
           </tr>
           <tr>
-            <td class="row-name">SIP-провайдер (Mango/Sipuni/МТТ)</td>
-            <td>500-1500 ₽/мес + 0,5-1 ₽/мин</td>
-            <td>1,5-3 тыс. ₽/мес + минуты</td>
-            <td>3 провайдера в резерве, 5-8 тыс. ₽/мес</td>
+            <td class="row-name">SIP-минуты исходящие</td>
+            <td>0,5-1 ₽/мин</td>
+            <td>0,5-1 ₽/мин</td>
+            <td>0,5-1 ₽/мин</td>
           </tr>
           <tr>
-            <td class="row-name">Платформа агента (Vapi/Retell)</td>
-            <td>$0,05/мин платформа</td>
-            <td>$0,05/мин или свой стек</td>
-            <td>свой стек, платформа не нужна</td>
-          </tr>
-          <tr>
-            <td class="row-name">Hosting / cloud</td>
-            <td>VPS 500-2000 ₽/мес</td>
-            <td>cloud 5-10 тыс. ₽/мес</td>
-            <td>GPU-сервер 80-300 тыс. ₽/мес</td>
-          </tr>
-          <tr>
-            <td class="row-name">ElevenLabs подписка</td>
-            <td>Creator $22/мес</td>
-            <td>Creator или Business</td>
-            <td>Business $1320/мес ≈ 120 тыс. ₽</td>
+            <td class="row-name">Платформа Vapi/Retell (если используем)</td>
+            <td>$0,05/мин ≈ 4,5 ₽/мин</td>
+            <td>$0,05/мин или 0 (свой стек)</td>
+            <td>0 (свой стек)</td>
           </tr>
           <tr style="background:var(--accent-soft)">
-            <td class="row-name"><b style="color:var(--accent)">Итого operating cost/мес</b></td>
-            <td><b style="color:var(--accent)">15-35 тыс. ₽</b></td>
-            <td><b style="color:var(--accent)">50-120 тыс. ₽</b></td>
-            <td><b style="color:var(--accent)">150-400 тыс. ₽</b></td>
+            <td class="row-name"><b style="color:var(--accent)">Итого переменные/минуту</b></td>
+            <td><b style="color:var(--accent)">8-10 ₽/мин</b></td>
+            <td><b style="color:var(--accent)">4-9 ₽/мин</b></td>
+            <td><b style="color:var(--accent)">0,5-1 ₽/мин</b></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <div class="card" style="margin-top:24px;padding:24px 28px;background:linear-gradient(135deg,rgba(61,220,151,.08),rgba(61,220,151,.02));border-color:rgba(61,220,151,.3)">
-    <h3 style="margin:0 0 14px;font-size:18px">Сравнение с альтернативами на 5 000 минут/мес</h3>
+  <div class="card" style="margin-top:48px;padding:28px 32px;background:linear-gradient(135deg,rgba(255,107,61,.12),rgba(255,107,61,.04));border-color:rgba(255,107,61,.3)">
+    <h3 style="margin:0 0 18px;font-size:20px;color:var(--ink)">Пример расчёта на 5 000 минут/месяц</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:14px">
+      <thead>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+          <th style="text-align:left;padding:10px 0;color:var(--ink-2);font-weight:500">Тариф</th>
+          <th style="text-align:right;padding:10px 0;color:var(--ink-2);font-weight:500">Постоянные</th>
+          <th style="text-align:right;padding:10px 0;color:var(--ink-2);font-weight:500">Переменные (5000 мин)</th>
+          <th style="text-align:right;padding:10px 0;color:var(--accent);font-weight:600">Итого/мес</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+          <td style="padding:12px 0">Pilot</td>
+          <td style="text-align:right">5 тыс. ₽</td>
+          <td style="text-align:right">5000 × 9 = 45 тыс. ₽</td>
+          <td style="text-align:right"><b style="color:var(--accent)">~50 тыс. ₽</b></td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+          <td style="padding:12px 0"><b>Basic</b></td>
+          <td style="text-align:right">17 тыс. ₽</td>
+          <td style="text-align:right">5000 × 6,5 = 32,5 тыс. ₽</td>
+          <td style="text-align:right"><b style="color:var(--accent)">~50 тыс. ₽</b></td>
+        </tr>
+        <tr>
+          <td style="padding:12px 0">Full</td>
+          <td style="text-align:right">320 тыс. ₽</td>
+          <td style="text-align:right">5000 × 0,75 = 3,8 тыс. ₽</td>
+          <td style="text-align:right"><b style="color:var(--accent)">~325 тыс. ₽</b></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:18px;color:var(--ink-2);font-size:13px;line-height:1.5">Full дорог на малом объёме (постоянка GPU доминирует), но при 50 000 мин/мес = ~360 тыс. ₽ (постоянка не растёт). На таком объёме Basic = 17 тыс. постоянных + 50000 × 6,5 = 342 тыс., разница исчезает, а Full даёт self-host LLM и независимость от ElevenLabs/OpenAI.</p>
+  </div>
+
+  <div class="card" style="margin-top:32px;padding:24px 28px;background:linear-gradient(135deg,rgba(61,220,151,.08),rgba(61,220,151,.02));border-color:rgba(61,220,151,.3)">
+    <h3 style="margin:0 0 14px;font-size:18px">Сравнение с альтернативами на тех же 5 000 минут/мес</h3>
     <table style="width:100%;border-collapse:collapse;font-size:14px">
       <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
         <td style="padding:8px 0;color:var(--ink-2)">Колл-центр на живых операторах</td>
@@ -1130,14 +1247,16 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:13px;border-
         <td style="text-align:right;color:var(--warn);font-weight:600">12-32 тыс. ₽ + лимиты на кастом</td>
       </tr>
       <tr>
-        <td style="padding:8px 0;color:var(--ink-2)"><b>Ваш кастомный агент (Pilot/Basic)</b></td>
-        <td style="text-align:right;color:var(--ok);font-weight:700">15-35 тыс. ₽, полный контроль</td>
+        <td style="padding:8px 0;color:var(--ink-2)"><b>Ваш кастомный агент (Basic)</b></td>
+        <td style="text-align:right;color:var(--ok);font-weight:700">~50 тыс. ₽, полный контроль</td>
       </tr>
     </table>
   </div>
 
-  <p style="margin-top:24px;color:var(--ink-2);font-size:14px;line-height:1.6">Цифры по сервисам взяты из публичных прайсов вендоров на май 2026 (Deepgram, ElevenLabs, Vapi, Yandex Cloud, Mango Office, Sipuni). Курс пересчёта USD/RUB ~92. На больших объёмах вендоры дают скидки 10-25 процентов, эти переговоры я веду за вас бесплатно.</p>
+  <p style="margin-top:24px;color:var(--ink-2);font-size:14px;line-height:1.6">Цифры взяты из публичных прайсов вендоров на май 2026 (Deepgram, ElevenLabs, Vapi, Yandex Cloud, Mango Office, Sipuni). Курс USD/RUB ~92. На объёмах от 30 000 мин/мес вендоры дают скидки 10-25 процентов, переговоры веду за вас бесплатно.</p>
 </section>
+
+<section class="section wrap" id="timeline">
   <span class="eyebrow"><span class="dot"></span> Сроки внедрения</span>
   <h2 style="margin-top:18px">От договора до первого живого звонка: 14 дней (Pilot) или 21-28 дней (Basic).</h2>
 
