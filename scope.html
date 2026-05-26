@@ -54,10 +54,13 @@ p{margin:0 0 12px 0;color:var(--ink-2)}
 /* HEADER */
 .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(10,13,20,.78);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1240px;margin:0 auto;gap:16px}
-.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--ink-2);font-size:16px;font-weight:500}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--ink-2);font-size:16px;font-weight:500;flex-shrink:0;padding:8px 4px}
 .back-link:hover{color:var(--accent)}
 .brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:17px;color:var(--ink-2)}
 .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+.nav-links{display:flex;gap:18px;color:var(--ink-2);font-size:16px;flex-wrap:wrap;justify-content:flex-end;flex:1}
+.nav-links a{color:var(--ink-2);padding:8px 4px;display:inline-block}
+.nav-links a:hover{color:var(--accent)}
 
 /* HERO */
 .hero{padding:40px 0 30px}
@@ -190,8 +193,11 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:15px;border-
   .wrap{padding:0 18px}
   h1{font-size:clamp(28px,7.2vw,40px)}
   h2{font-size:clamp(22px,5.6vw,30px)}
-  .nav-inner{padding:10px 16px}
-  .brand{display:none}
+  .nav-inner{padding:10px 12px;gap:8px}
+  .back-link{font-size:14px;padding:8px 6px}
+  .nav-links{gap:4px;font-size:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{padding:9px 10px;font-size:14px;white-space:nowrap;border-radius:10px;background:rgba(255,255,255,.04);min-height:40px;display:inline-flex;align-items:center}
   .toc{grid-template-columns:1fr;padding:18px}
   .cui-grid{grid-template-columns:1fr}
   .section{padding:44px 0}
@@ -218,8 +224,13 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:15px;border-
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="back-link"><span>←</span> На главную</a>
-    <div class="brand"><span class="brand-dot"></span> Состав внедрения · AI Voice Agent</div>
-    <a href="https://t.me/dmitry_trast" class="btn" style="padding:10px 18px;font-size:16px">Написать в Telegram</a>
+    <div class="nav-links">
+      <a href="#stages">Этапы</a>
+      <a href="#tiers">Тарифы</a>
+      <a href="#compare">Сравнение</a>
+      <a href="#tech">Архитектура</a>
+      <a href="#contact">Связаться</a>
+    </div>
   </div>
 </nav>
 
@@ -907,7 +918,7 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:15px;border-
       <a href="index.html" class="btn ghost" style="font-size:17px;padding:18px 36px">← Назад к описанию</a>
     </div>
 
-    <div class="messengers">
+    <div id="contact" class="messengers">
       <a href="tel:+79833487383"><span aria-hidden="true">📞</span> +7 983 348-73-83</a>
       <a href="https://api.whatsapp.com/send?phone=79833487383" target="_blank" rel="noopener"><img src="assets/whatsapp.png" alt=""> WhatsApp</a>
       <a href="https://max.ru/u/f9LHodD0cOIsOzXfCpOMtkucfw9LSVaSq-0veSqmkXnCaAPDQr6WzJzkZZ8" target="_blank" rel="noopener"><img src="assets/max.png" alt=""> Max</a>
